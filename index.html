@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微表情心理學 - 探索人類情緒的面部密碼</title>
+    <meta name="description" content="學會在0.2秒內讀懂他人真實情感，掌握世界通用的七種基本情緒表達">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <i class="fas fa-brain loading-icon"></i>
+            <h2>微表情心理學</h2>
+            <p>載入中...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>微表情心理學</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">首頁</a>
+                <a href="#video" class="nav-link">教學影片</a>
+                <a href="#emotions" class="nav-link">七種情緒</a>
+                <a href="#review" class="nav-link">總複習</a>
+                <a href="#quiz" class="nav-link" onclick="showQuiz()">測驗</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h1 class="hero-title">
+                    探索人類情緒的
+                    <span class="gradient-text">面部密碼</span>
+                </h1>
+                <p class="hero-subtitle">一同揭開微表情的奧祕</p>
+                <p class="hero-description">
+                    學會在0.2秒內讀懂他人真實情感，掌握世界通用的七種基本情緒表達
+                </p>
+                
+                <div class="hero-buttons">
+                    <button onclick="scrollToSection('video')" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        開始學習表情！
+                    </button>
+                    <button onclick="scrollToSection('review')" class="btn btn-secondary">
+                        <i class="fas fa-brain"></i>
+                        觀看總複習！
+                    </button>
+                    <button onclick="showQuiz()" class="btn btn-success">
+                        <i class="fas fa-target"></i>
+                        挑戰能力測驗！
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">7種</div>
+                        <div class="stat-label">基本情緒</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0.2秒</div>
+                        <div class="stat-label">識別時間</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">完整課程</div>
+                        <div class="stat-label">教學+總複習</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">全球通用</div>
+                        <div class="stat-label">跨文化表達</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="video-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>微表情教學影片</h2>
+                    <p>透過專業教學影片，學習如何識別和解讀人類的微表情</p>
+                </div>
+                
+                <div class="video-container">
+                    <iframe 
+                        src="https://drive.google.com/file/d/1b9MebPRukuhsI5lsW-HQ9k4hWrrjQ66Q/preview"
+                        width="100%" 
+                        height="400"
+                        allow="autoplay; fullscreen"
+                        title="微表情心理學教學影片">
+                    </iframe>
+                </div>
+                
+                <div class="learning-tips">
+                    <h3><i class="fas fa-lightbulb"></i> 學習提示</h3>
+                    <ul>
+                        <li>觀察眉毛的細微變化 - 這是最容易識別的部位</li>
+                        <li>注意眼部肌肉的緊張程度</li>
+                        <li>嘴角和鼻翼的微小動作都有含義</li>
+                        <li>練習時先從觀察單一部位開始</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotions Section -->
+        <section id="emotions" class="emotions-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>七種基本情緒</h2>
+                    <p>根據保羅·艾克曼的研究，這七種情緒表達在全球各文化中都是通用的</p>
+                </div>
+                
+                <div class="emotions-grid" id="emotions-grid">
+                    <!-- 情緒卡片將由 JavaScript 動態生成 -->
+                </div>
+                
+                <div class="practice-section">
+                    <h3><i class="fas fa-chart-line"></i> 提升辨識能力的方法</h3>
+                    <div class="practice-grid">
+                        <div class="practice-item">
+                            <h4><i class="fas fa-edit"></i> 練習建議</h4>
+                            <ul>
+                                <li>先觀察自己的表情變化</li>
+                                <li>從眉毛開始，逐步觀察全臉</li>
+                                <li>練習區分積極與消極情緒</li>
+                                <li>注意表情的持續時間</li>
+                            </ul>
+                        </div>
+                        <div class="practice-item">
+                            <h4><i class="fas fa-bullseye"></i> 應用場景</h4>
+                            <ul>
+                                <li>商務談判與客戶服務</li>
+                                <li>跨文化溝通</li>
+                                <li>人際關係建立</li>
+                                <li>謊言識別與真實感受判斷</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section id="review" class="review-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> 微表情學習總複習</h2>
+                    <p>透過這段總複習影片，鞏固您對微表情識別的理解，複習七種基本情緒的特徵與應用</p>
+                </div>
+                
+                <div class="video-container">
+                    <iframe 
+                        src="https://drive.google.com/file/d/1YRIWF028huvMRSEzNp8dK8sjgd0LHNf-/preview"
+                        width="100%" 
+                        height="500"
+                        allow="autoplay; fullscreen"
+                        title="微表情心理學總複習影片">
+                    </iframe>
+                </div>
+                
+                <div class="review-content">
+                    <div class="review-item">
+                        <h3><i class="fas fa-book-open"></i> 複習重點</h3>
+                        <ul>
+                            <li>七種基本情緒的面部特徵識別</li>
+                            <li>FACS動作單位編碼系統應用</li>
+                            <li>微表情與宏觀表情的區別</li>
+                            <li>日常生活中的觀察技巧</li>
+                            <li>跨文化溝通中的表情解讀</li>
+                        </ul>
+                    </div>
+                    <div class="review-item">
+                        <h3><i class="fas fa-target"></i> 學習成果檢測</h3>
+                        <p>觀看完總複習影片後，建議進行以下測驗來檢驗學習成果：</p>
+                        <div class="review-buttons">
+                            <button onclick="showQuiz()" class="btn btn-success">
+                                <i class="fas fa-camera"></i>
+                                圖片微表情測驗
+                            </button>
+                            <button onclick="showTextQuiz()" class="btn btn-info">
+                                <i class="fas fa-eye"></i>
+                                文字描述測驗
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="learning-path">
+                    <h3><i class="fas fa-rocket"></i> 建議學習路徑</h3>
+                    <div class="path-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>觀看教學影片</h4>
+                            <p>學習基礎理論與七種情緒</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>觀看總複習</h4>
+                            <p>鞏固知識點與重點回顧</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>實戰測驗</h4>
+                            <p>透過測驗檢驗學習效果</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>日常應用</h4>
+                            <p>將技能應用到實際生活</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" class="quiz-section hidden">
+        <div class="container">
+            <div class="quiz-header">
+                <button onclick="backToHome()" class="btn btn-outline">
+                    <i class="fas fa-home"></i> 返回首頁
+                </button>
+                <h2><i class="fas fa-target"></i> 微表情識別測驗</h2>
+                <p>基於FACS編碼系統的專業微表情分析測驗</p>
+            </div>
+            
+            <div id="quiz-start" class="quiz-start">
+                <div class="quiz-intro">
+                    <i class="fas fa-eye quiz-intro-icon"></i>
+                    <h3>圖片微表情測驗</h3>
+                    <p>透過觀察真實照片中的微表情特徵，測試您對七種基本情緒的識別能力。每題都基於FACS面部動作編碼系統的科學理論。</p>
+                    
+                    <div class="quiz-features">
+                        <div class="feature">
+                            <div class="feature-number">10題</div>
+                            <div class="feature-label">專業測驗</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-number">FACS</div>
+                            <div class="feature-label">科學編碼</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-number">7種</div>
+                            <div class="feature-label">基本情緒</div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="startQuiz()" class="btn btn-primary btn-large">
+                        <i class="fas fa-play"></i>
+                        開始測驗
+                    </button>
+                </div>
+            </div>
+            
+            <div id="quiz-progress" class="quiz-progress hidden">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                
+                <div class="question-container">
+                    <div class="question-header">
+                        <span id="question-number">題目 1 / 10</span>
+                        <h3 id="question-title">請問下列圖片中的人物，最有可能是呈現哪一種情緒？</h3>
+                    </div>
+                    
+                    <div class="question-image">
+                        <img id="question-img" src="" alt="微表情測驗圖片">
+                        <div class="observation-tip">
+                            <i class="fas fa-search"></i>
+                            <span>觀察提示：請仔細觀察照片中人物的面部表情，注意眉毛、眼部、鼻部和嘴部等關鍵區域的變化</span>
+                        </div>
+                    </div>
+                    
+                    <div class="options-container">
+                        <h4>請選擇這張照片表達的情緒：</h4>
+                        <div id="options-grid" class="options-grid">
+                            <!-- 選項將由 JavaScript 動態生成 -->
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button id="prev-btn" onclick="previousQuestion()" class="btn btn-outline" disabled>
+                            <i class="fas fa-arrow-left"></i>
+                            上一題
+                        </button>
+                        <button id="next-btn" onclick="nextQuestion()" class="btn btn-primary" disabled>
+                            下一題
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="quiz-result" class="quiz-result hidden">
+                <div class="result-header">
+                    <h2><i class="fas fa-trophy"></i> 測驗完成！</h2>
+                    <div id="score-display" class="score-display">8 / 10</div>
+                    <p id="score-text">您答對了 80% 的題目</p>
+                    <div id="performance-badge" class="performance-badge">🏆 專家級表現！</div>
+                </div>
+                
+                <div id="detailed-results" class="detailed-results">
+                    <!-- 詳細結果將由 JavaScript 動態生成 -->
+                </div>
+                
+                <div class="result-actions">
+                    <button onclick="resetQuiz()" class="btn btn-outline">
+                        <i class="fas fa-redo"></i>
+                        重新測驗
+                    </button>
+                    <button onclick="backToHome()" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        返回首頁
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-brain"></i>
+                    <h3>微表情心理學</h3>
+                    <p>由美麗的涵老師出品 ✨</p>
+                </div>
+                
+                <div class="footer-deploy">
+                    <h4><i class="fas fa-rocket"></i> 部署指南</h4>
+                    <div class="deploy-methods">
+                        <div class="deploy-method">
+                            <h5>GitHub Pages</h5>
+                            <p>1. 推送代碼至 GitHub 倉庫</p>
+                            <p>2. 在 Settings → Pages 啟用</p>
+                            <p>3. 選擇 main 分支部署</p>
+                        </div>
+                        <div class="deploy-method">
+                            <h5>Netlify</h5>
+                            <p>1. 連接 GitHub 倉庫</p>
+                            <p>2. 設置構建命令和發布目錄</p>
+                            <p>3. 自動部署完成</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-info">
+                    <p>基於 原生 HTML + CSS + JS 構建 | 響應式設計 | 支援影片切換與測驗模組擴展</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
